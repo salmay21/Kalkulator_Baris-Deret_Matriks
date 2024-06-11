@@ -37,31 +37,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baris dan Deret</title>
+    <title>Kalkulator Matriks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Baris dan Deret</h1>
+        <h1>Kalkulator Matriks</h1>
         <div>
-            <label for="type">Jenis:</label>
-            <select id="type">
-                <option value="aritmatika">Baris Aritmatika</option>
-                <option value="geometri">Baris Geometri</option>
+            <label for="operation">Operasi:</label>
+            <select id="operation">
+                <option value="addition">Penjumlahan</option>
+                <option value="subtraction">Pengurangan</option>
+                <option value="multiplication">Perkalian</option>
             </select>
         </div>
-        <div>
-            <label for="a1">Suku Pertama (a<sub>1</sub>):</label>
-            <input type="number" id="a1">
+        <div class="matrix-input">
+            <h2>Matriks A</h2>
+            <input type="number" id="a11" placeholder="a11">
+            <input type="number" id="a12" placeholder="a12">
+            <br>
+            <input type="number" id="a21" placeholder="a21">
+            <input type="number" id="a22" placeholder="a22">
         </div>
-        <div>
-            <label for="n">Nomor Suku (n):</label>
-            <input type="number" id="n">
+        <div class="matrix-input">
+            <h2>Matriks B</h2>
+            <input type="number" id="b11" placeholder="b11">
+            <input type="number" id="b12" placeholder="b12">
+            <br>
+            <input type="number" id="b21" placeholder="b21">
+            <input type="number" id="b22" placeholder="b22">
         </div>
-        <div id="result"></div>
         <button onclick="calculate()">Hitung</button>
+        <div id="result"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
